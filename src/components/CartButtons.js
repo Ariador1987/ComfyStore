@@ -10,6 +10,7 @@ const CartButtons = () => {
     // we added the className because => 1. there's a parent we'll use to select (case here, parent is Navbar component and this style is there)
     // 2. => global styles use case
     const { closeSidebar } = useProductsContext();
+    const { total_items } = useCartContext();
 
     return (
         <Container className="cart-btn-wrapper">
@@ -17,7 +18,7 @@ const CartButtons = () => {
                 Cart
                 <span className="cart-container">
                     <FaShoppingCart />
-                    <span className="cart-value">5</span>
+                    <span className="cart-value">{total_items}</span>
                 </span>
             </Link>
             <button onClick={closeSidebar} type="button" className="auth-btn">

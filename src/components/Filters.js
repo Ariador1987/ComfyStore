@@ -88,9 +88,7 @@ const Filters = () => {
                                 if (clr === "all") {
                                     return (
                                         <button
-                                            key={new Date()
-                                                .getTime()
-                                                .toString()}
+                                            key={index}
                                             name="color"
                                             onClick={(e) => updateFilters(e)}
                                             data-color="all"
